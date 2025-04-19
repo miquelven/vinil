@@ -1,15 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap");
+
 @import "tailwindcss";
 
 @theme {
+  /* cores */
   --color-primary: oklch(55.42% 0.146 34.82);
   --color-dark: oklch(22.64% 0 0);
   --color-light: oklch(93.95% 0.024 73.61);
   --color-accent: oklch(69.08% 0.136 58.04);
   --color-darkLight: oklch(34.85% 0 0);
+
+  /* fontes */
+  --font-primary: "Cormorant Garamond", serif;
+  --font-secondary: "Space Grotesk", sans-serif;
+}
+
+/* animações */
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-slow-spin {
+    animation: slow-spin 5.5s linear infinite;
+  }
+}
+
+@keyframes soft-bounce-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@layer utilities {
+  .animate-soft-bounce-down {
+    animation: soft-bounce-down 1.5s ease-in-out infinite;
+  }
 }
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #f5e9da;
 }
