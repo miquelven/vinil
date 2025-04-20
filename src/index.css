@@ -16,20 +16,6 @@
 }
 
 /* animações */
-@keyframes slow-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@layer utilities {
-  .animate-slow-spin {
-    animation: slow-spin 5.5s linear infinite;
-  }
-}
 
 @keyframes soft-bounce-down {
   0%,
