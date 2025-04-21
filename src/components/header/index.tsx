@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { Menu, X } from "lucide-react";
 import Container from "../container";
 
+import logo from "@/assets/images/logo.png";
 import backgroundHeader from "@/assets/images/background-header.png";
 import headerIcon from "@/assets/images/icon-header.png";
 
@@ -120,7 +121,7 @@ export default function Header() {
     <header>
       <Container>
         <div className="flex justify-between items-center pt-5 z-50 relative">
-          <h1 className="text-xl font-bold">Logo</h1>
+          <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
           <button onClick={openMenu}>
             <Menu className="transition-all duration-300 cursor-pointer size-9 hover:scale-90 text-white" />
           </button>

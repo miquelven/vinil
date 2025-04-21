@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Container from "../container";
 import vinil from "@/assets/images/vinil-6.png";
+import logo from "@/assets/images/logo.png";
 
 import TextDecoration from "../text-decoration";
 
@@ -26,7 +27,7 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col gap-5">
           <div className="flex justify-between items-center">
-            <p>Logo</p>
+            <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
             {/* icons */}
             <div className="flex items-center gap-6">
               <div className="bg-darkLight p-2 rounded-full">
@@ -42,9 +43,12 @@ export default function Footer() {
           </div>
           <div className="w-full h-0.5 bg-darkLight" />
           <div className="flex items-center gap-5 justify-center">
-            <p className="font-secondary font-bold text-sm">
+            <p className="font-secondary font-medium text-sm">
               Feito por{" "}
-              <TextDecoration className="text-primary" text="Miquelven" />
+              <TextDecoration
+                className="font-bold text-primary"
+                text="Miquelven"
+              />
             </p>
             <img
               ref={vinilRef}
