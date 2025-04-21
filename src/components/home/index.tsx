@@ -55,6 +55,7 @@ export default function Home() {
   return (
     <main
       ref={container}
+      id="ouca"
       className="flex justify-center items-center flex-col relative h-[75vh] pt-[47vh]"
     >
       <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">

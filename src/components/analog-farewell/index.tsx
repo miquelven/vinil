@@ -86,6 +86,7 @@ export default function AnalogFarewell() {
 
   return (
     <section
+      id="despedida"
       ref={sectionRef}
       className="h-screen relative"
       style={{

@@ -167,6 +167,7 @@ export default function VisualTrackPlayer() {
   return (
     <section
       ref={container}
+      id="sinta"
       className="relative min-h-screen pt-20 overflow-hidden"
     >
       <div

@@ -254,6 +254,7 @@ export default function VinylTimeLine() {
 
   return (
     <section
+      id="conheca"
       ref={sectionRef}
       className="h-screen flex justify-center items-center text-white relative"
       style={{ background: `url(${background})` }}
