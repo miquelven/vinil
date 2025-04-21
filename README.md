@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# 🎵  VinilVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma experiência interativa, artística e nostálgica construída com React, GSAP e TailwindCSS.  
+Explore o universo do vinil de forma digital, com animações suaves, design responsivo e uma vibe que mistura o analógico com o moderno.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Visite o projeto
 
-## Expanding the ESLint configuration
+![Image](https://github.com/user-attachments/assets/3a9c4510-f292-4db3-a70f-06e7da5dac28)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[👉 Acesse agora](https://vinil.vercel.app)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 19**
+- **Vite**
+- **TypeScript**
+- **TailwindCSS 4**
+- **GSAP + @gsap/react** – Animações de scroll, entrada, loops visuais
+- **Lucide Icons**
+- **Jotai** – Gerenciamento leve de estado
+- **ESLint** – Padrões e boas práticas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## ✨ Funcionalidades
+
+- **🎧 Disco de vinil com rotação animada**
+- **🎼 Troca de disco com interação visual**
+- **🎛️ Player de música (visual)**
+- **✍️ Versos poéticos animados com scroll**
+- **📱 Layout responsivo**
+- **🌀 Animações imersivas com GSAP**
+- **📩 Ícone de contato via email**
+
+---
+
+## 🧠 Ideia por trás do projeto
+
+Entre o clique do play e o silêncio da agulha, nasce o **VinilVerse**.  
+Um espaço onde cada disco gira como o tempo, e cada verso vibra como granulação analógica.  
+Aqui, a música é visual, a poesia respira, e o digital se curva ao charme do imperfeito.
+
