@@ -115,16 +115,16 @@ export default function VinylVerseScroll() {
 
   return (
     <section id="explore" className="text-white relative overflow-hidden">
-      {/* Fundo decorativo com animação GSAP */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      {/* 🔳 Background com textura sutil */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.025]"
+        className="absolute inset-0 z-10 bg-cover bg-center opacity-[0.025]"
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}
       />
 
-      <div className="absolute inset-0 pointer-events-none z-20">
+      {/* 🔵 Círculos decorativos animados */}
+      <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute w-full h-full">
           <div
             className="circle-one absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"
