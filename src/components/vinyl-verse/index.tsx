@@ -151,7 +151,7 @@ export default function VinylVerseScroll() {
               className="w-full flex items-center justify-center h-screen snap-center"
             >
               <div className="w-full max-w-3xl px-6 text-center">
-                <p className="font-primary font-bold text-4xl md:text-6xl leading-snug relative z-10">
+                <p className="font-primary font-bold text-4xl md:text-6xl leading-snug relative z-10 max-sm:text-3xl">
                   {line.segments.map((seg, i) => (
                     <Fragment key={i}>
                       {seg.text.split(/(\s+)/).map((word, j) =>

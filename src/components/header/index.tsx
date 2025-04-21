@@ -109,7 +109,7 @@ export default function Header() {
       <button
         key={href}
         onClick={() => handleClickItem(href)}
-        className={`group relative flex items-center gap-3 transition-all duration-300 cursor-pointer ${
+        className={`group relative flex items-center gap-3 transition-all duration-300 cursor-pointer max-lg:-translate-x-5 ${
           isActive ? "scale-110" : "hover:scale-110"
         }`}
       >
@@ -122,7 +122,7 @@ export default function Header() {
               : "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
           }`}
         />
-        <span className="relative font-secondary font-bold text-[40px] text-white">
+        <span className="relative font-secondary font-bold text-[40px] text-white max-sm:text-4xl">
           {label}
           <span
             className={`absolute left-0 top-1/2 translate-y-1/2 w-full h-1 bg-white origin-center transition-transform duration-300 ${
@@ -164,7 +164,7 @@ export default function Header() {
             <X className="size-8 transition-transform hover:scale-90" />
           </button>
 
-          <nav className="flex flex-col items-center gap-12 text-3xl font-semibold z-10">
+          <nav className="flex flex-col items-center gap-12 text-3xl font-semibold z-10 ">
             {headerData.map(({ href, label }) => renderMenuItem(href, label))}
           </nav>
         </div>

@@ -187,10 +187,13 @@ export default function VisualTrackPlayer() {
         </div>
 
         <Container>
-          <div className="flex items-center relative z-10">
-            <div ref={recordsListRef} className="flex flex-col gap-5 flex-1">
+          <div className="flex items-center relative z-10 max-lg:flex-col-reverse max-lg:gap-40 max-lg:mt-10 max-sm:mt-0 max-sm:gap-20 max-sm:mb-10">
+            <div
+              ref={recordsListRef}
+              className="flex flex-col gap-5 flex-1 max-lg:flex-row"
+            >
               {records.map((item) => (
-                <div key={item.id} className="record-item">
+                <div key={item.id} className="record-item max-lg:-rotate-90">
                   <RecordsArea
                     record={item}
                     onClick={() => setSelectedRecord(item)}
@@ -204,10 +207,13 @@ export default function VisualTrackPlayer() {
                 ref={largeRef}
                 src={vinylRecord}
                 alt={selectedRecord?.albumName || "Vinil"}
-                className="size-[70%]"
+                className="size-[70%] max-2xl:size-[65%] "
               />
 
-              <div ref={infosRef} className="max-w-[380px]">
+              <div
+                ref={infosRef}
+                className="max-w-[380px] max-lg:!max-w-[440px] max-lg:w-[440px] max-sm:w-[90%]"
+              >
                 <h3 className="text-3xl font-primary font-semibold ">
                   {selectedRecord?.albumName || "Selecione um disco"}
                 </h3>

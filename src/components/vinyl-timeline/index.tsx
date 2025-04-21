@@ -118,7 +118,7 @@ export default function VinylTimeLine() {
       setActiveIndex((prev) =>
         prev === timelineData.length - 1 ? 0 : prev + 1
       );
-    }, 6000);
+    }, 10000);
   };
 
   useEffect(() => {
@@ -128,7 +128,6 @@ export default function VinylTimeLine() {
     };
   }, []);
 
-  // ✨ Animações de troca
   useGSAP(
     () => {
       if (textRef.current) {
@@ -173,7 +172,6 @@ export default function VinylTimeLine() {
     { dependencies: [activeIndex] }
   );
 
-  // Scroll-in
   useGSAP(() => {
     if (buttonsRef.current && sectionRef.current) {
       gsap.fromTo(
@@ -257,19 +255,23 @@ export default function VinylTimeLine() {
       id="conheca"
       ref={sectionRef}
       className="h-screen flex justify-center items-center text-white relative"
-      style={{ background: `url(${background})` }}
+      style={{
+        background: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
     >
       <Container>
         <div
           ref={contentRef}
-          className="bg-neutral-900 p-6 mx-auto mb-32 transition-all duration-300 [box-shadow:5px_5px_2px_#3a3a3a] hover:bg-neutral-800"
+          className="bg-neutral-900 p-6 mx-auto mb-32 transition-all duration-300 [box-shadow:5px_5px_2px_#3a3a3a] hover:bg-neutral-800 max-[340px]:mb-10"
         >
-          <h3 className="text-primary font-primary text-[44px] font-bold mb-2">
+          <h3 className="text-primary font-primary text-[44px] font-bold mb-2 max-2xl:text-4xl max-sm:text-2xl max-[340px]:!text-lg">
             {timelineData[activeIndex].year} - {timelineData[activeIndex].title}
           </h3>
           <p
             ref={textRef}
-            className="text-base font-secondary text-[32px] leading-snug"
+            className="text-base font-secondary text-[32px] leading-snug max-2xl:text-2xl max-sm:text-lg max-[340px]:!text-xs"
           >
             {timelineData[activeIndex].description
               .split(". ")
@@ -284,18 +286,18 @@ export default function VinylTimeLine() {
 
         <div
           ref={imageScrollRef}
-          className="flex justify-center bg-white w-fit mx-auto mb-16 rounded-lg shadow-lg shadow-dark"
+          className="flex justify-center bg-white w-fit mx-auto mb-16 rounded-lg shadow-lg shadow-dark "
         >
           <img
             ref={imageRef}
             src={timelineData[activeIndex].image}
             alt={timelineData[activeIndex].title}
-            className="w-[320px] h-[240px] object-contain transition-all duration-500 hover:scale-105 rounded-md"
+            className="w-[320px] h-[240px] object-contain transition-all duration-500 hover:scale-105 rounded-md max-[340px]:!w-[210px] max-[340px]:!h-[120px]"
           />
         </div>
 
         <div className="relative w-full">
-          <div className="absolute top-3.5 left-0 right-0 h-1 bg-primary z-0" />
+          <div className="absolute top-3.5 left-0 right-0 h-1 bg-primary z-0 max-2xl:top-3 max-lg:top-2.5 max-sm:top-1.5" />
           <div
             ref={buttonsRef}
             className="relative z-10 flex justify-between items-center flex-wrap"
@@ -311,7 +313,7 @@ export default function VinylTimeLine() {
                 aria-label={`Ir para ${item.year}: ${item.title}`}
               >
                 <div
-                  className={`size-8 rounded-full transition-all duration-300 ${
+                  className={`size-8 rounded-full transition-all duration-300 max-2xl:size-6 max-lg:size-5 max-sm:size-3 ${
                     index === activeIndex
                       ? "bg-primary border-primary scale-125"
                       : "bg-neutral-100 border-neutral-700 group-hover:border-primary"
@@ -320,7 +322,7 @@ export default function VinylTimeLine() {
                   }`}
                 />
                 <span
-                  className={`mt-2 font-bold text-[40px] font-primary transition-colors duration-300 ${
+                  className={`mt-2 font-bold text-[40px] font-primary transition-colors duration-300 max-2xl:text-4xl max-lg:text-2xl max-sm:text-sm max-[340px]:!text-[10px] ${
                     index === activeIndex
                       ? "text-primary font-bold"
                       : "text-neutral-300 group-hover:text-neutral-100"
