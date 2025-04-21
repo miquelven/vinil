@@ -109,7 +109,7 @@ export default function Header() {
       <button
         key={href}
         onClick={() => handleClickItem(href)}
-        className={`group relative flex items-center gap-3 transition-all duration-300 cursor-pointer max-sm:-translate-x-5 ${
+        className={`group relative flex items-center gap-3 transition-all duration-300 cursor-pointer max-lg:-translate-x-5 ${
           isActive ? "scale-110" : "hover:scale-110"
         }`}
       >
