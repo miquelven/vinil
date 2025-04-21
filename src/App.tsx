@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import AnalogFarewell from "./components/analog-farewell";
 import Home from "./components/home";
 import VinylTimeLine from "./components/vinyl-timeline";
@@ -10,9 +11,8 @@ function App() {
       <VisualTrackPlayer />
       
       <VinylTimeLine />
-      
       <AnalogFarewell />
-      
+      <Footer />
     </div>
   );
 }
