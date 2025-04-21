@@ -22,6 +22,7 @@ export default function AnalogFarewell() {
 
   return (
     <section
+      id="despedida"
       className="h-screen relative"
       style={{
         background: `url(${backgroundImage})`,

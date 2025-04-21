@@ -105,7 +105,7 @@ export default function VinylVerseScroll() {
   }, []);
 
   return (
-    <section className="text-white relative overflow-hidden">
+    <section id="explore" className="text-white relative overflow-hidden">
       {/* Fundo decorativo com animação GSAP */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute w-full h-full">

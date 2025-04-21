@@ -147,6 +147,7 @@ export default function VinylStories() {
 
   return (
     <section
+      id="colecione"
       ref={sectionRef}
       className="relative text-white"
       style={{
