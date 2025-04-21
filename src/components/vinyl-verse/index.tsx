@@ -4,6 +4,7 @@ import { useEffect, useRef, Fragment } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../container";
+import backgroundImage from "@/assets/images/background-verse.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,15 +67,23 @@ export default function VinylVerseScroll() {
       ScrollTrigger.create({
         trigger: el,
         start: "top 75%",
+        toggleActions: "play reset play reset",
         onEnter: () => {
-          gsap.to(words, {
-            opacity: 1,
-            y: 0,
-            stagger: 0.05,
-            duration: 0.3,
-            ease: "power2.out",
-            delay: index * 0.1,
-          });
+          gsap.fromTo(
+            words,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              stagger: 0.05,
+              duration: 0.3,
+              ease: "power2.out",
+              delay: index * 0.1,
+            }
+          );
+        },
+        onLeaveBack: () => {
+          gsap.set(words, { opacity: 0, y: 20 });
         },
       });
     });
@@ -108,13 +117,19 @@ export default function VinylVerseScroll() {
     <section id="explore" className="text-white relative overflow-hidden">
       {/* Fundo decorativo com animação GSAP */}
       <div className="absolute inset-0 pointer-events-none z-0">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.025]"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      />
+
+      <div className="absolute inset-0 pointer-events-none z-20">
         <div className="absolute w-full h-full">
-          {/* Círculo animado 1 */}
           <div
             className="circle-one absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"
             style={{ top: "20%", left: "10%" }}
           />
-          {/* Círculo animado 2 */}
           <div
             className="circle-two absolute w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl"
             style={{ bottom: "15%", right: "15%" }}
