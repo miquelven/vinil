@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: "#",
+    href: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7320199694041661441/",
     label: "LinkedIn",
   },
   {
@@ -47,7 +47,7 @@ export default function Footer() {
             <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
 
             {/* Social icons */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 max-sm:gap-3">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

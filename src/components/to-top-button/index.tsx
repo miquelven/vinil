@@ -25,7 +25,7 @@ export default function ToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-10 right-10 z-20 p-3 rounded-lg transition-all duration-300 cursor-pointer hover:scale-90 ${
+      className={`fixed bottom-10 right-10 z-20 p-3 rounded-lg transition-all duration-300 cursor-pointer hover:scale-90 max-sm:right-5 max-sm:bottom-5 max-sm:p-2 ${
         isVisible ? "opacity-100 bg-darkLight" : "opacity-0 pointer-events-none"
       }`}
     >

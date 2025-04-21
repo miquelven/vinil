@@ -74,10 +74,10 @@ export default function RecordsArea({ record, onClick }: RecordsAreaProps) {
         ref={behindRef}
         src={vinylRecord}
         alt=""
-        className={`size-36 absolute top-1 left-1/2 z-10 max-2xl:size-28 max-2xl:left-[calc(50%+10px)] max-lg:left-[calc(50%+7px)] max-sm:size-14 max-[340px]:!size-12 ${
+        className={`size-36 absolute top-1 left-1/2 z-10 max-2xl:size-28 max-2xl:left-[calc(50%+10px)] max-lg:left-[calc(50%+7px)] max-sm:size-14 max-sm:top-0 max-[340px]:!size-12 ${
           isSelected
             ? ""
-            : "max-sm:left-[calc(50%+44px)]  max-[340px]:!left-[calc(50%+50px)]"
+            : "max-sm:left-[calc(50%+47px)]   max-[340px]:!left-[calc(50%+50px)]"
         }`}
       />
 

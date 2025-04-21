@@ -264,14 +264,14 @@ export default function VinylTimeLine() {
       <Container>
         <div
           ref={contentRef}
-          className="bg-neutral-900 p-6 mx-auto mb-32 transition-all duration-300 [box-shadow:5px_5px_2px_#3a3a3a] hover:bg-neutral-800 max-[340px]:mb-10"
+          className="bg-neutral-900 p-6 mx-auto mb-32 transition-all duration-300 [box-shadow:5px_5px_2px_#3a3a3a] hover:bg-neutral-800 max-sm:mb-20 max-[340px]:mb-10"
         >
-          <h3 className="text-primary font-primary text-[44px] font-bold mb-2 max-2xl:text-4xl max-sm:text-2xl max-[340px]:!text-lg">
+          <h3 className="text-primary font-primary text-[44px] font-bold mb-2 max-2xl:text-4xl max-sm:text-lg max-[340px]:!text-lg">
             {timelineData[activeIndex].year} - {timelineData[activeIndex].title}
           </h3>
           <p
             ref={textRef}
-            className="text-base font-secondary text-[32px] leading-snug max-2xl:text-2xl max-sm:text-lg max-[340px]:!text-xs"
+            className="text-base font-secondary text-[32px] leading-snug max-2xl:text-2xl max-sm:text-sm max-[340px]:!text-xs"
           >
             {timelineData[activeIndex].description
               .split(". ")
@@ -292,7 +292,7 @@ export default function VinylTimeLine() {
             ref={imageRef}
             src={timelineData[activeIndex].image}
             alt={timelineData[activeIndex].title}
-            className="w-[320px] h-[240px] object-contain transition-all duration-500 hover:scale-105 rounded-md max-[340px]:!w-[210px] max-[340px]:!h-[120px]"
+            className="w-[320px] h-[240px] object-contain transition-all duration-500 hover:scale-105 rounded-md max-sm:!w-[210px] max-sm:!h-[120px]"
           />
         </div>
 
