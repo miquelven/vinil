@@ -67,15 +67,23 @@ export default function VinylVerseScroll() {
       ScrollTrigger.create({
         trigger: el,
         start: "top 75%",
+        toggleActions: "play reset play reset",
         onEnter: () => {
-          gsap.to(words, {
-            opacity: 1,
-            y: 0,
-            stagger: 0.05,
-            duration: 0.3,
-            ease: "power2.out",
-            delay: index * 0.1,
-          });
+          gsap.fromTo(
+            words,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              stagger: 0.05,
+              duration: 0.3,
+              ease: "power2.out",
+              delay: index * 0.1,
+            }
+          );
+        },
+        onLeaveBack: () => {
+          gsap.set(words, { opacity: 0, y: 20 });
         },
       });
     });
