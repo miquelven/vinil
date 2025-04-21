@@ -161,14 +161,14 @@ export default function VinylStories() {
         <div className="relative z-10 flex flex-col items-center justify-around h-screen">
           <h3
             ref={textRef}
-            className="font-secondary font-bold text-[40px] text-center max-lg:text-3xl max-sm:text-xl max-[340px]:!text-base"
+            className="font-secondary font-bold text-[40px] text-center max-lg:text-3xl max-sm:text-lg max-[340px]:!text-base"
           >
             “{data[activeIndex].message}”
           </h3>
 
           <div
             ref={listRef}
-            className="flex justify-center gap-10 mt-12 flex-wrap"
+            className="flex justify-center gap-10 mt-12 flex-wrap max-sm:gap-5 max-sm:mt-0"
           >
             {data.map((item, idx) => (
               <div
@@ -185,7 +185,9 @@ export default function VinylStories() {
                   src={item.image}
                   alt={`Vinil ${idx + 1}`}
                   className={`transition-all duration-300 size-40 object-cover max-sm:size-28 max-[340px]:!size-16 ${
-                    idx === activeIndex ? "scale-125" : "scale-90"
+                    idx === activeIndex
+                      ? "scale-125 max-sm:scale-105"
+                      : "scale-90"
                   }`}
                 />
               </div>
