@@ -155,7 +155,7 @@ export default function MusicControl() {
 
   return (
     <div ref={containerRef}>
-      <div className="text-sm text-neutral-400 max-w-[320px] mx-auto text-right">
+      <div className="text-sm text-neutral-400 max-w-[380px] mx-auto text-right">
         <span>
           {formatTime(progress * duration)} / {formatTime(duration)}
         </span>
@@ -164,7 +164,7 @@ export default function MusicControl() {
       <div
         ref={progressRef}
         onClick={handleSeek}
-        className="w-[320px] max-w-[320px] mt-1 mb-4 h-1.5 bg-neutral-500/30 rounded overflow-hidden cursor-pointer mx-auto"
+        className="w-[380px] max-w-[380px] mt-1 mb-4 h-1.5 bg-neutral-500/30 rounded overflow-hidden cursor-pointer mx-auto"
       >
         <div
           className="h-full bg-[#e55a30] transition-all duration-150"

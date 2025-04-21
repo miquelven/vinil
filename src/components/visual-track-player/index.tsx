@@ -207,7 +207,7 @@ export default function VisualTrackPlayer() {
                 className="size-[70%]"
               />
 
-              <div ref={infosRef} className="max-w-[320px]">
+              <div ref={infosRef} className="max-w-[380px]">
                 <h3 className="text-3xl font-primary font-semibold ">
                   {selectedRecord?.albumName || "Selecione um disco"}
                 </h3>
