@@ -30,15 +30,25 @@ export default function Footer() {
             <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
             {/* icons */}
             <div className="flex items-center gap-6">
-              <div className="bg-darkLight p-2 rounded-full">
+              <a
+                href="https://github.com/miquelven/vinil"
+                target="_blank"
+                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
+              >
                 <Github className=" text-[#f5e9da] " />
-              </div>
-              <div className="bg-darkLight p-2 rounded-full">
+              </a>
+              <a
+                href=""
+                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
+              >
                 <Linkedin className="text-[#f5e9da]" />
-              </div>
-              <div className="bg-darkLight p-2 rounded-full">
-                <Mail className=" text-[#f5e9da] " />
-              </div>
+              </a>
+              <a
+                href="mailto:miquelven.silva@gmail.com"
+                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
+              >
+                <Mail className="text-[#f5e9da]" />
+              </a>
             </div>
           </div>
           <div className="w-full h-0.5 bg-darkLight" />
