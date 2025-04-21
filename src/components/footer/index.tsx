@@ -7,8 +7,25 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Container from "../container";
 import vinil from "@/assets/images/vinil-6.png";
 import logo from "@/assets/images/logo.png";
-
 import TextDecoration from "../text-decoration";
+
+const socialLinks = [
+  {
+    icon: Github,
+    href: "https://github.com/miquelven/vinil",
+    label: "GitHub",
+  },
+  {
+    icon: Linkedin,
+    href: "#",
+    label: "LinkedIn",
+  },
+  {
+    icon: Mail,
+    href: "mailto:miquelven.silva@gmail.com",
+    label: "Email",
+  },
+];
 
 export default function Footer() {
   const vinilRef = useRef<HTMLImageElement>(null);
@@ -28,32 +45,28 @@ export default function Footer() {
         <div className="flex flex-col gap-5">
           <div className="flex justify-between items-center">
             <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
-            {/* icons */}
+
+            {/* Social icons */}
             <div className="flex items-center gap-6">
-              <a
-                href="https://github.com/miquelven/vinil"
-                target="_blank"
-                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
-              >
-                <Github className=" text-[#f5e9da] " />
-              </a>
-              <a
-                href=""
-                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
-              >
-                <Linkedin className="text-[#f5e9da]" />
-              </a>
-              <a
-                href="mailto:miquelven.silva@gmail.com"
-                className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
-              >
-                <Mail className="text-[#f5e9da]" />
-              </a>
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 bg-darkLight p-2 rounded-full hover:scale-90"
+                  aria-label={label}
+                >
+                  <Icon className={`text-[#f5e9da] max-sm:size-4`} />
+                </a>
+              ))}
             </div>
           </div>
+
           <div className="w-full h-0.5 bg-darkLight" />
+
           <div className="flex items-center gap-5 justify-center">
-            <p className="font-secondary font-medium text-sm">
+            <p className="font-secondary font-medium text-sm max-sm:text-xs">
               Feito por{" "}
               <TextDecoration
                 className="font-bold text-primary"
@@ -64,7 +77,7 @@ export default function Footer() {
               ref={vinilRef}
               src={vinil}
               alt="Imagem do vinil"
-              className="size-6"
+              className="size-6 max-sm:size-4"
             />
           </div>
         </div>
