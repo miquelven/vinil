@@ -117,9 +117,13 @@ export default function AnalogFarewell() {
               />
             </div>
 
-            <button className="fade-scroll no-stagger transition-all duration-300 font-secondary font-bold text-center bg-dark py-3 px-7 rounded-xl hover:bg-darkLight cursor-pointer">
+            <a
+              href="https://github.com/miquelven/vinil"
+              target="_blank"
+              className="fade-scroll no-stagger transition-all duration-300 font-secondary font-bold text-center bg-dark py-3 px-7 rounded-xl hover:bg-darkLight cursor-pointer"
+            >
               Ver projeto no github
-            </button>
+            </a>
           </div>
         </div>
       </Container>
