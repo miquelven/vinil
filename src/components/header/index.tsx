@@ -21,6 +21,7 @@ const headerData = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -67,6 +68,22 @@ export default function Header() {
       });
     }
   };
+
+  useGSAP(() => {
+    if (headerRef.current) {
+      gsap.fromTo(
+        headerRef.current,
+        { opacity: 0, y: -50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          delay: 1.4,
+        }
+      );
+    }
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
@@ -120,7 +137,10 @@ export default function Header() {
   return (
     <header>
       <Container>
-        <div className="flex justify-between items-center pt-5 z-50 relative">
+        <div
+          ref={headerRef}
+          className="flex justify-between items-center pt-5 z-50 relative"
+        >
           <img src={logo} alt="Imagem da logo" className="w-auto h-9" />
           <button onClick={openMenu}>
             <Menu className="transition-all duration-300 cursor-pointer size-9 hover:scale-90 text-white" />
