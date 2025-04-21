@@ -67,7 +67,7 @@ export default function Home() {
         />
       </div>
 
-      <h1 className="title font-primary text-center font-bold text-[80px] max-xl:text-6xl max-xl:mb-4 max-sm:text-5xl max-sm:px-5">
+      <h1 className="title font-primary text-center font-bold text-[80px] max-xl:text-6xl max-xl:mb-4 max-sm:text-5xl max-xl:px-5">
         Antes de ser{" "}
         <TextDecoration text={"ouvido,"} className="text-primary" /> o vinil é{" "}
         <TextDecoration text={"sentido."} className="text-primary" />
